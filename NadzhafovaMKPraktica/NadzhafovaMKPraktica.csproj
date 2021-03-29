@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B426B50-0A11-4252-8FE2-7C2574A35045}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NadzhafovaMKPraktica</RootNamespace>
+    <AssemblyName>NadzhafovaMKPraktica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>znak.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\CnangeMedicines\AddMedicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\AddMedicines.Designer.cs">
+      <DependentUpon>AddMedicines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\AddPharmacies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\AddPharmacies.Designer.cs">
+      <DependentUpon>AddPharmacies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangeCategories\Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangeCategories\Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\ChangePharmacies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\ChangePharmacies.Designer.cs">
+      <DependentUpon>ChangePharmacies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ChangeMedicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ChangeMedicines.Designer.cs">
+      <DependentUpon>ChangeMedicines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ChooseCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ChooseCategories.Designer.cs">
+      <DependentUpon>ChooseCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangeOrders\ChangeOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangeOrders\ChangeOrders.Designer.cs">
+      <DependentUpon>ChangeOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\OrderUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\OrderUser.Designer.cs">
+      <DependentUpon>OrderUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\InfoForProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\InfoForProduct.Designer.cs">
+      <DependentUpon>InfoForProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Hygiene\Hygiene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Hygiene\Hygiene.Designer.cs">
+      <DependentUpon>Hygiene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Joints\Joints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Joints\Joints.Designer.cs">
+      <DependentUpon>Joints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Diabetes\Diabetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Diabetes\Diabetes.Designer.cs">
+      <DependentUpon>Diabetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Catalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Catalog.Designer.cs">
+      <DependentUpon>Catalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input\Autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\Autorization.Designer.cs">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangeOrders\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangeOrders\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\Pharmacies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePharmacies\Pharmacies.Designer.cs">
+      <DependentUpon>Pharmacies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\Medicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\Medicines.Designer.cs">
+      <DependentUpon>Medicines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmPanaceyaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmPanaceyaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Input\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ShowMedicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CnangeMedicines\ShowMedicines.Designer.cs">
+      <DependentUpon>ShowMedicines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Vision\Vision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Vision\Vision.Designer.cs">
+      <DependentUpon>Vision.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\CnangeMedicines\AddMedicines.resx">
+      <DependentUpon>AddMedicines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangePharmacies\AddPharmacies.resx">
+      <DependentUpon>AddPharmacies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangeCategories\Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangePharmacies\ChangePharmacies.resx">
+      <DependentUpon>ChangePharmacies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CnangeMedicines\ChangeMedicines.resx">
+      <DependentUpon>ChangeMedicines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CnangeMedicines\ChooseCategories.resx">
+      <DependentUpon>ChooseCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangeOrders\ChangeOrders.resx">
+      <DependentUpon>ChangeOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\OrderUser.resx">
+      <DependentUpon>OrderUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\InfoForProduct.resx">
+      <DependentUpon>InfoForProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Hygiene\Hygiene.resx">
+      <DependentUpon>Hygiene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Joints\Joints.resx">
+      <DependentUpon>Joints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Diabetes\Diabetes.resx">
+      <DependentUpon>Diabetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Catalog.resx">
+      <DependentUpon>Catalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\Autorization.resx">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangeOrders\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ChangePharmacies\Pharmacies.resx">
+      <DependentUpon>Pharmacies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CnangeMedicines\Medicines.resx">
+      <DependentUpon>Medicines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Input\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CnangeMedicines\ShowMedicines.resx">
+      <DependentUpon>ShowMedicines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Vision\Vision.resx">
+      <DependentUpon>Vision.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PharmPanaceyaDataSet.xsc">
+      <DependentUpon>PharmPanaceyaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PharmPanaceyaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmPanaceyaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmPanaceyaDataSet.xss">
+      <DependentUpon>PharmPanaceyaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ARIAL.TTF" />
+    <None Include="Resources\ARIALBD.TTF" />
+    <None Include="Resources\ARIALBI.TTF" />
+    <None Include="Resources\ARIALI.TTF" />
+    <None Include="Resources\ARIALN.TTF" />
+    <None Include="Resources\ARIALNB.TTF" />
+    <None Include="Resources\ARIALNBI.TTF" />
+    <None Include="Resources\ARIALNI.TTF" />
+    <None Include="Resources\ARIBLK.TTF" />
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+    <None Include="Resources\rrr.png" />
+    <None Include="Resources\rrr1.png" />
+    <None Include="Resources\ddd.png" />
+    <None Include="Resources\catalog2.png" />
+    <None Include="Resources\diabetes.png" />
+    <None Include="Resources\vision.png" />
+    <None Include="Resources\vision1.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\joints.png" />
+    <None Include="Resources\hygiene.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\41.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\homecat.png" />
+    <None Include="Resources\корзина.png" />
+    <None Include="Resources\аа.png" />
+    <None Include="Resources\icons8-заказ-на-покупку-50.png" />
+    <None Include="Resources\orders.png" />
+    <None Include="Resources\orders2.png" />
+    <None Include="Resources\Welcom2.png" />
+    <None Include="Resources\Welcom3.png" />
+    <None Include="Resources\registration.png" />
+    <None Include="Resources\registration1.png" />
+    <Content Include="znak.ico" />
+    <None Include="Resources\pharmacies.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\medicines.png" />
+    <None Include="Resources\categories.png" />
+    <Content Include="Resources\close.png" />
+    <None Include="Resources\logotip50.png" />
+    <None Include="Resources\logo50.png" />
+    <None Include="Resources\logotip1.png" />
+    <None Include="Resources\logotip.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\lg5.png" />
+    <None Include="Resources\lg51.png" />
+    <None Include="Resources\Icon1.ico" />
+    <Content Include="Resources\logo.png" />
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
